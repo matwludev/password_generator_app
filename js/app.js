@@ -7,6 +7,7 @@ const strengthBox1 = document.querySelector(".box1");
 const strengthBox2 = document.querySelector(".box2");
 const strengthBox3 = document.querySelector(".box3");
 const strengthBox4 = document.querySelector(".box4");
+const copyTextBtn = document.querySelector(".copyPassBtn");
 rangeValue.innerText = rangeSlider.value;
 let isChecked = 0;
 const uppers = [
@@ -178,3 +179,7 @@ generator.onclick = (e) => {
 	}
 	return (yourPass.innerText = password.join(""));
 };
+
+copyTextBtn.addEventListener("click", () => {
+	navigator.clipboard.writeText(yourPass.innerText);
+});
