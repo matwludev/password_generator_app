@@ -3,11 +3,13 @@ const rangeSlider = document.querySelector(".rangeSlider");
 const checkboxes = document.querySelectorAll(".checkbox");
 const generator = document.querySelector(".generate");
 const yourPass = document.querySelector(".generator__password");
+const strengthBoxes = document.querySelectorAll(".strenght__box");
 const strengthBox1 = document.querySelector(".box1");
 const strengthBox2 = document.querySelector(".box2");
 const strengthBox3 = document.querySelector(".box3");
 const strengthBox4 = document.querySelector(".box4");
 const copyTextBtn = document.querySelector(".copyPassBtn");
+const strengthLvl = document.querySelector(".strenght__level");
 rangeValue.innerText = rangeSlider.value;
 let isChecked = 0;
 const uppers = [
@@ -124,7 +126,6 @@ checkboxes.forEach(function (e) {
 				passwordBase = passwordBase.concat(symbols);
 			}
 		} else {
-			console.log("nie");
 			isChecked--;
 			if (this.id == "upper") {
 				passwordBase = passwordBase.filter((e) => !uppers.includes(e));
@@ -136,11 +137,63 @@ checkboxes.forEach(function (e) {
 				passwordBase = passwordBase.filter((e) => !symbols.includes(e));
 			}
 		}
+		if (isChecked == 0) {
+			alert("You must use at least one option");
+			strengthBox1.style.backgroundColor = "hsl(0, 91%, 63%)";
+			strengthBox1.style.border = "hsl(0, 91%, 63%)";
+			strengthBox2.style.background = "none";
+			strengthBox2.style.border = ".2rem solid hsl(252, 11%, 91%)";
+			strengthBox3.style.background = "none";
+			strengthBox3.style.border = ".2rem solidhsl(252, 11%, 91%)";
+			strengthBox4.style.background = "none";
+			strengthBox4.style.border = ".2rem solid hsl(252, 11%, 91%)";
+			strengthLvl.innerText = "too weak!";
+		} else if (isChecked == 1) {
+			strengthBox1.style.backgroundColor = "hsl(0, 91%, 63%)";
+			strengthBox1.style.border = "hsl(0, 91%, 63%)";
+			strengthBox2.style.background = "none";
+			strengthBox2.style.border = ".2rem solid hsl(252, 11%, 91%)";
+			strengthBox3.style.background = "none";
+			strengthBox3.style.border = ".2rem solid hsl(252, 11%, 91%)";
+			strengthBox4.style.background = "none";
+			strengthBox4.style.border = ".2rem solid hsl(252, 11%, 91%)";
+			strengthLvl.innerText = "too weak!";
+		} else if (isChecked == 2) {
+			strengthBox1.style.backgroundColor = "hsl(13, 95%, 66%)";
+			strengthBox1.style.border = "hsl(13, 95%, 66%)";
+			strengthBox2.style.backgroundColor = "hsl(13, 95%, 66%)";
+			strengthBox2.style.border = "hsl(13, 95%, 66%)";
+			strengthBox3.style.background = "none";
+			strengthBox3.style.border = ".2rem solid hsl(252, 11%, 91%)";
+			strengthBox4.style.background = "none";
+			strengthBox4.style.border = ".2rem solid hsl(252, 11%, 91%)";
+			strengthLvl.innerText = "weak";
+		} else if (isChecked == 3) {
+			strengthBox1.style.backgroundColor = "hsl(42, 91%, 68%)";
+			strengthBox1.style.border = "hsl(42, 91%, 68%)";
+			strengthBox2.style.backgroundColor = "hsl(42, 91%, 68%)";
+			strengthBox2.style.border = "hsl(42, 91%, 68%)";
+			strengthBox3.style.backgroundColor = "hsl(42, 91%, 68%)";
+			strengthBox3.style.border = "hsl(42, 91%, 68%)";
+			strengthBox4.style.background = "none";
+			strengthBox4.style.border = ".2rem solid hsl(252, 11%, 91%)";
+			strengthLvl.innerText = "medium";
+		} else if (isChecked == 4) {
+			strengthBox1.style.backgroundColor = "hsl(127, 100%, 82%)";
+			strengthBox1.style.border = "hsl(127, 100%, 82%)";
+			strengthBox2.style.backgroundColor = "hsl(127, 100%, 82%)";
+			strengthBox2.style.border = "hsl(127, 100%, 82%)";
+			strengthBox3.style.backgroundColor = "hsl(127, 100%, 82%)";
+			strengthBox3.style.border = "hsl(127, 100%, 82%)";
+			strengthBox4.style.backgroundColor = "hsl(127, 100%, 82%)";
+			strengthBox4.style.border = "hsl(127, 100%, 82%)";
+			strengthLvl.innerText = "strong";
+		}
 	});
 	return passwordBase;
 });
 
-rangeSlider.onchange = () => {
+rangeSlider.oninput = () => {
 	rangeValue.innerText = rangeSlider.value;
 };
 
@@ -148,38 +201,26 @@ generator.onclick = (e) => {
 	let password = [];
 	e.preventDefault();
 	if (isChecked == 0) {
-		alert("You must use at lease one option");
+		alert("You must use at least one option");
+		strengthBox1.style.background = "none";
+		strengthBox2.style.background = "none";
+		strengthBox3.style.background = "none";
+		strengthBox4.style.background = "none";
+		yourPass.innerText = "P4$5W0rD!";
+		yourPass.style.color = "hsla(252, 11%, 91%, .25)";
 	} else {
 		for (let i = 1; i <= rangeSlider.value; i++) {
 			let pickCharacter = Math.floor(Math.random() * (passwordBase.length - 1));
 			password.push(passwordBase[pickCharacter]);
+			yourPass.style.color = "hsl(252, 11%, 91%)";
+			yourPass.innerText = password.join("");
 		}
 	}
-
-	if (isChecked == 1) {
-		strengthBox1.innerText = "1";
-		strengthBox2.innerText = "";
-		strengthBox3.innerText = "";
-		strengthBox4.innerText = "";
-	} else if (isChecked == 2) {
-		strengthBox1.innerText = "1";
-		strengthBox2.innerText = "2";
-		strengthBox3.innerText = "";
-		strengthBox4.innerText = "";
-	} else if (isChecked == 3) {
-		strengthBox1.innerText = "1";
-		strengthBox2.innerText = "2";
-		strengthBox3.innerText = "3";
-		strengthBox4.innerText = "";
-	} else if (isChecked == 4) {
-		strengthBox1.innerText = "1";
-		strengthBox2.innerText = "2";
-		strengthBox3.innerText = "3";
-		strengthBox4.innerText = "4";
-	}
-	return (yourPass.innerText = password.join(""));
+	return yourPass;
 };
 
 copyTextBtn.addEventListener("click", () => {
-	navigator.clipboard.writeText(yourPass.innerText);
+	yourPass.innerText == "P4$5W0rD!"
+		? alert("Empty password")
+		: navigator.clipboard.writeText(yourPass.innerText);
 });

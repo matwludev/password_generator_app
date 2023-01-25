@@ -7,3 +7,28 @@
 // hsl(13, 95%, 66%)
 // hsl(0, 91%, 63%)
 // hsl(127, 100%, 82%)   
+
+$colors:(body-Bg-color: hsl(248, 14%, 11%),
+    header-Text-color: hsl(251, 9%, 53%),
+    main-passGenBg-color: hsl(248, 10%, 15%),
+    main-optionsBg-color: hsl(248, 10%, 15%),
+    main-passGenTextOff-color: hsla(252, 11%, 91%, 0.25),
+    main-passGenTextOn-color: hsl(252, 11%, 91%),
+    main-lengthText-color: hsl(252, 11%, 91%),
+    main-rangeText-color: hsl(127, 100%, 82%),
+    main-checkboxCheckedBg-color: hsl(127, 100%, 82%),
+    main-checkboxBorderBg-color: hsl(252, 11%, 91%),
+    main-checkboxHoverBorder-color: hsl(127, 100%, 82%),
+    main-checkboxCheckmark-color: hsl(248, 14%, 11%),
+    main-strengthBg-color: hsl(248, 14%, 11%),
+    main-strengthTitleText-color: hsl(251, 9%, 53%),
+    main-strengthLevelText-color: hsl(252, 11%, 91%),
+    main-strengthLevelBoxBg-color: hsl(252, 11%, 91%),
+    main-optionsText-color: hsl(252, 11%, 91%),
+    strengthLvl1-Bg-color: hsl(0, 91%, 63%),
+    strengthLvl2-Bg-color: hsl(13, 95%, 66%),
+    strengthLvl3-Bg-color: hsl(42, 91%, 68%),
+    strengthLvl4-Bg-color: hsl(127, 100%, 82%),
+    generateBtn-Bg-color: hsl(127, 100%, 82%),
+    generateBtn-Text-color: hsl(248, 14%, 11%),
+)

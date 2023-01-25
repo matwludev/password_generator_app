@@ -11,4 +11,255 @@ html {
   font-size: 10px;
 }
 
+body {
+  background-color: hsl(248deg, 14%, 11%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body header {
+  margin: 6rem auto 2rem auto;
+}
+body header h1 {
+  color: hsl(251deg, 9%, 53%);
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+body main {
+  width: 100%;
+  margin: 0 2rem;
+}
+body main .generator {
+  margin: 0 2rem;
+  background-color: hsl(248deg, 10%, 15%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+body main .generator p {
+  margin: 2rem 0 2rem 2rem;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: hsla(252deg, 11%, 91%, 0.25);
+}
+body main .generator button {
+  background: none;
+  border: none;
+  margin-right: 2.5rem;
+}
+body main .options {
+  background-color: hsl(248deg, 10%, 15%);
+  margin: 2rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body main .options .char__lengthTextBox {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-self: flex-start;
+}
+body main .options .char__lengthTextBox label {
+  color: hsl(252deg, 11%, 91%);
+  font-size: 1.6rem;
+}
+body main .options .char__lengthTextBox .rangeValue {
+  font-size: 2.4rem;
+  color: hsl(127deg, 100%, 82%);
+}
+body main .options input[type=range] {
+  width: 100%;
+  margin: 8.95px 0 3rem 0;
+  background-color: transparent;
+  -webkit-appearance: none;
+}
+body main .options input[type=range]:focus {
+  outline: none;
+}
+body main .options input[type=range]::-webkit-slider-runnable-track {
+  background: rgba(163, 255, 174, 0.78);
+  border: 0.2px solid #a3ffae;
+  border-radius: 1.3px;
+  width: 100%;
+  height: 8.1px;
+  cursor: pointer;
+}
+body main .options input[type=range]::-webkit-slider-thumb {
+  margin-top: -9.15px;
+  width: 26px;
+  height: 26px;
+  background: #e7e6eb;
+  border: 1.8px solid #e7e6eb;
+  border-radius: 15px;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+body main .options input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #a8ffb2;
+}
+body main .options input[type=range]::-moz-range-track {
+  background: rgba(163, 255, 174, 0.78);
+  border: 0.2px solid #a3ffae;
+  border-radius: 1.3px;
+  width: 100%;
+  height: 8.1px;
+  cursor: pointer;
+}
+body main .options input[type=range]::-moz-range-thumb {
+  width: 26px;
+  height: 26px;
+  background: #e7e6eb;
+  border: 1.8px solid #e7e6eb;
+  border-radius: 15px;
+  cursor: pointer;
+}
+body main .options input[type=range]::-ms-track {
+  background: transparent;
+  border-color: transparent;
+  border-width: 9.85px 0;
+  color: transparent;
+  width: 100%;
+  height: 8.1px;
+  cursor: pointer;
+}
+body main .options input[type=range]::-ms-fill-lower {
+  background: #9effaa;
+  border: 0.2px solid #a3ffae;
+  border-radius: 2.6px;
+}
+body main .options input[type=range]::-ms-fill-upper {
+  background: rgba(163, 255, 174, 0.78);
+  border: 0.2px solid #a3ffae;
+  border-radius: 2.6px;
+}
+body main .options input[type=range]::-ms-thumb {
+  width: 26px;
+  height: 26px;
+  background: #e7e6eb;
+  border: 1.8px solid #e7e6eb;
+  border-radius: 15px;
+  cursor: pointer;
+  margin-top: 0px;
+  /*Needed to keep the Edge thumb centred*/
+}
+body main .options input[type=range]:focus::-ms-fill-lower {
+  background: rgba(163, 255, 174, 0.78);
+}
+body main .options input[type=range]:focus::-ms-fill-upper {
+  background: #a8ffb2;
+}
+body main .options .options__checkboxWrapper {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-self: flex-start;
+}
+body main .options .options__checkboxWrapper input {
+  box-sizing: border-box;
+  position: absolute;
+  opacity: 0;
+}
+body main .options .options__checkboxWrapper input + label {
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+}
+body main .options .options__checkboxWrapper input + label:before {
+  content: "";
+  margin-right: 2rem;
+  display: inline-block;
+  vertical-align: text-top;
+  width: 2rem;
+  height: 2rem;
+  background: none;
+  box-shadow: inset 0px 0px 0px 0.2rem hsl(252deg, 11%, 91%);
+}
+body main .options .options__checkboxWrapper input:hover + label:before {
+  box-shadow: inset 0px 0px 0px 0.2rem hsl(127deg, 100%, 82%);
+}
+body main .options .options__checkboxWrapper input:checked + label:before {
+  background: hsl(127deg, 100%, 82%);
+  box-shadow: inset 0px 0px 0px 0.2rem hsl(127deg, 100%, 82%);
+}
+body main .options .options__checkboxWrapper input:disabled + label {
+  color: red;
+  cursor: auto;
+}
+body main .options .options__checkboxWrapper input:disabled + label:before {
+  box-shadow: inset 0px 0px 0px 0.2rem hsl(252deg, 11%, 91%);
+  background: none;
+}
+body main .options .options__checkboxWrapper input:checked + label:after {
+  content: "";
+  position: absolute;
+  left: 0.5rem;
+  top: 0.9rem;
+  background: hsl(248deg, 14%, 11%);
+  width: 0.2rem;
+  height: 0.2rem;
+  box-shadow: 0.2rem 0 0 hsl(248deg, 14%, 11%), 0.4rem 0 0 hsl(248deg, 14%, 11%), 0.4rem -0.2rem 0 hsl(248deg, 14%, 11%), 0.4rem -0.4rem 0 hsl(248deg, 14%, 11%), 0.4rem -0.6rem 0 hsl(248deg, 14%, 11%), 0.4rem -0.8rem 0 hsl(248deg, 14%, 11%);
+  transform: rotate(45deg);
+}
+body main .options .options__checkboxWrapper label {
+  font-size: 1.6rem;
+  color: hsl(252deg, 11%, 91%);
+}
+body main .options .options__strengthWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background-color: hsl(248deg, 14%, 11%);
+}
+body main .options .options__strengthWrapper h2 {
+  color: hsl(251deg, 9%, 53%);
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+body main .options .options__strengthWrapper .options__strengthWrapper-boxes {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+body main .options .options__strengthWrapper .options__strengthWrapper-boxes .strenght__level {
+  color: hsl(252deg, 11%, 91%);
+  text-transform: uppercase;
+  font-size: 1.8rem;
+}
+body main .options .options__strengthWrapper .options__strengthWrapper-boxes .strenght__box {
+  width: 1rem;
+  height: 3rem;
+  border: 0.2rem solid hsl(252deg, 11%, 91%);
+  margin-left: 0.5rem;
+}
+body main .options .generate {
+  width: 100%;
+  padding: 2rem;
+  margin-top: 2rem;
+  border-radius: 0;
+  border: none;
+  background-color: hsl(127deg, 100%, 82%);
+}
+body main .options .generate span {
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: hsl(248deg, 14%, 11%);
+}
+body main .options .generate svg {
+  margin-left: 2rem;
+}
+
 /*# sourceMappingURL=style.css.map */
