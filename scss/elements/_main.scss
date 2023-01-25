@@ -1,0 +1,266 @@
+body {
+    main {
+        width: 100%;
+        margin: 0 2rem;
+        .generator {
+            margin: 0 2rem;
+            background-color: map-get($colors, main-passGenBg-color );
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+
+            p {
+                margin: 2rem 0 2rem 2rem;
+                font-size: 2.4rem;
+                font-weight: 700;
+                color: map-get($colors , main-passGenTextOff-color );
+            }
+
+            button {
+                background: none;
+                border: none;
+                margin-right: 2.5rem;
+            }
+        }
+        .options {
+            background-color: map-get($colors, main-optionsBg-color );
+            margin: 2rem;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .char__lengthTextBox {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                align-self: flex-start;
+
+                label {
+                    color: map-get($colors , main-lengthText-color );
+                    font-size: 1.6rem;
+                }
+
+                .rangeValue{
+                    font-size: 2.4rem;
+                    color: map-get($colors, main-rangeText-color );
+                }
+            }
+            input[type=range] {
+                width: 100%;
+                margin: 8.95px 0 3rem 0;
+                background-color: transparent;
+                -webkit-appearance: none;
+              }
+              input[type=range]:focus {
+                outline: none;
+              }
+              input[type=range]::-webkit-slider-runnable-track {
+                background: rgba(163, 255, 174, 0.78);
+                border: 0.2px solid #a3ffae;
+                border-radius: 1.3px;
+                width: 100%;
+                height: 8.1px;
+                cursor: pointer;
+              }
+              input[type=range]::-webkit-slider-thumb {
+                margin-top: -9.15px;
+                width: 26px;
+                height: 26px;
+                background: #e7e6eb;
+                border: 1.8px solid #e7e6eb;
+                border-radius: 15px;
+                cursor: pointer;
+                -webkit-appearance: none;
+              }
+              input[type=range]:focus::-webkit-slider-runnable-track {
+                background: #a8ffb2;
+              }
+              input[type=range]::-moz-range-track {
+                background: rgba(163, 255, 174, 0.78);
+                border: 0.2px solid #a3ffae;
+                border-radius: 1.3px;
+                width: 100%;
+                height: 8.1px;
+                cursor: pointer;
+              }
+              input[type=range]::-moz-range-thumb {
+                width: 26px;
+                height: 26px;
+                background: #e7e6eb;
+                border: 1.8px solid #e7e6eb;
+                border-radius: 15px;
+                cursor: pointer;
+              }
+              input[type=range]::-ms-track {
+                background: transparent;
+                border-color: transparent;
+                border-width: 9.85px 0;
+                color: transparent;
+                width: 100%;
+                height: 8.1px;
+                cursor: pointer;
+              }
+              input[type=range]::-ms-fill-lower {
+                background: #9effaa;
+                border: 0.2px solid #a3ffae;
+                border-radius: 2.6px;
+              }
+              input[type=range]::-ms-fill-upper {
+                background: rgba(163, 255, 174, 0.78);
+                border: 0.2px solid #a3ffae;
+                border-radius: 2.6px;
+              }
+              input[type=range]::-ms-thumb {
+                width: 26px;
+                height: 26px;
+                background: #e7e6eb;
+                border: 1.8px solid #e7e6eb;
+                border-radius: 15px;
+                cursor: pointer;
+                margin-top: 0px;
+                /*Needed to keep the Edge thumb centred*/
+              }
+              input[type=range]:focus::-ms-fill-lower {
+                background: rgba(163, 255, 174, 0.78);
+              }
+              input[type=range]:focus::-ms-fill-upper {
+                background: #a8ffb2;
+              }
+              
+
+            .options__checkboxWrapper {
+                margin-bottom: 2rem;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                align-self: flex-start;
+                input {
+                    box-sizing: border-box;
+                    position: absolute; 
+                    opacity: 0;
+                  
+                    & + label {
+                      position: relative;
+                      cursor: pointer;
+                      padding: 0;
+                    }
+                  
+                    // Box.
+                    & + label:before {
+                      content: '';
+                      margin-right: 2rem;
+                      display: inline-block;
+                      vertical-align: text-top;
+                      width: 2rem;
+                      height: 2rem;
+                      background: none;
+                      box-shadow: inset 0px 0px 0px .2rem map-get($colors , main-checkboxBorderBg-color );
+                    }
+                  
+                    // Box hover
+                    &:hover + label:before {
+                        box-shadow: inset 0px 0px 0px .2rem map-get($colors , main-checkboxHoverBorder-color);
+                    }
+                  
+                    // Box checked
+                    &:checked + label:before {
+                      background: map-get($colors , main-checkboxCheckedBg-color );
+                      box-shadow: inset 0px 0px 0px .2rem map-get($colors , main-checkboxHoverBorder-color);
+                    }
+                    
+                    // Disabled state label.
+                    &:disabled + label {
+                      color: red;
+                      cursor: auto;
+                    }
+                  
+                    // Disabled box.
+                    &:disabled + label:before {
+                      box-shadow: inset 0px 0px 0px .2rem map-get($colors , main-checkboxBorderBg-color );
+                      background: none;
+                    }
+                  
+                    // Checkmark. Could be replaced with an image
+                    &:checked + label:after {
+                      content: '';
+                      position: absolute;
+                      left: .5rem;
+                      top: .9rem;
+                      background: map-get($colors, main-checkboxCheckmark-color );
+                      width: .2rem;
+                      height: .2rem;
+                      box-shadow: 
+                        .2rem 0 0 map-get($colors, main-checkboxCheckmark-color ),
+                        .4rem 0 0 map-get($colors, main-checkboxCheckmark-color ),
+                        .4rem -.2rem 0 map-get($colors, main-checkboxCheckmark-color ),
+                        .4rem -.4rem 0 map-get($colors, main-checkboxCheckmark-color ),
+                        .4rem -.6rem 0 map-get($colors, main-checkboxCheckmark-color ),
+                        .4rem -.8rem 0 map-get($colors, main-checkboxCheckmark-color );
+                      transform: rotate(45deg);
+                    }
+                  }
+                label {
+                    font-size: 1.6rem;
+                    color: map-get($colors, main-optionsText-color);
+                }
+            }
+            
+
+            .options__strengthWrapper {
+                width: 100%;
+                display: flex; 
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1.5rem 2rem;
+                background-color: map-get($colors, main-strengthBg-color);
+                h2 {
+                    color: map-get($colors , main-strengthTitleText-color );
+                    text-transform: uppercase;
+                    font-size: 1.6rem;
+                    font-weight: 700;
+                }
+                .options__strengthWrapper-boxes { 
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+
+                    .strenght__level {
+                        color: map-get($colors , main-strengthLevelText-color );
+                        text-transform: uppercase;
+                        font-size: 1.8rem;
+                    }
+
+                    .strenght__box {
+                        width: 1rem;
+                        height: 3rem;
+                        border: .2rem solid map-get($colors , main-strengthLevelBoxBg-color);
+                        margin-left: .5rem;
+                    } 
+                }
+            }
+            .generate {
+                width: 100%;
+                padding: 2rem;
+                margin-top: 2rem;
+                border-radius: 0;
+                border: none;
+                background-color: map-get($colors , generateBtn-Bg-color);
+                span {
+                    font-size: 1.6rem;
+                    letter-spacing: .1rem;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    color: map-get($colors ,generateBtn-Text-color );
+                }
+            svg {
+                margin-left: 2rem;
+            }
+            }
+        }
+    }
+}

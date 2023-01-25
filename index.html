@@ -13,7 +13,7 @@
 		</header>
 		<main>
 			<section class="generator">
-				<p class="generator__password"></p>
+				<p class="generator__password">P4$5W0rD!</p>
 				<button class="copyPassBtn">
 					<svg width="21" height="24" xmlns="http://www.w3.org/2000/svg">
 						<path
@@ -24,7 +24,7 @@
 				</button>
 			</section>
 			<section class="options">
-				<div>
+				<div class="char__lengthTextBox">
 					<label for="charLength">Character Length</label>
 					<p class="rangeValue"></p>
 				</div>
@@ -36,26 +36,26 @@
 					step="1"
 					class="rangeSlider"
 				/>
-				<div>
+				<div class="options__checkboxWrapper">
 					<input type="checkbox" name="upper" id="upper" class="checkbox" />
 					<label for="upper">Include Uppercase Letters</label>
 				</div>
-				<div>
+				<div class="options__checkboxWrapper">
 					<input type="checkbox" name="lower" id="lower" class="checkbox" />
 					<label for="lower">Include Lowercase Letters</label>
 				</div>
-				<div>
+				<div class="options__checkboxWrapper">
 					<input type="checkbox" name="numbers" id="numbers" class="checkbox" />
 					<label for="numbers">Include Numbers</label>
 				</div>
-				<div>
+				<div class="options__checkboxWrapper">
 					<input type="checkbox" name="symbols" id="symbols" class="checkbox" />
 					<label for="symbols">Include Symbols</label>
 				</div>
-				<div>
+				<div class="options__strengthWrapper">
 					<h2>strenght</h2>
-					<div>
-						<p class="strenght__level"></p>
+					<div class="options__strengthWrapper-boxes">
+						<p class="strenght__level">too weak!</p>
 						<div class="strenght__box box1"></div>
 						<div class="strenght__box box2"></div>
 						<div class="strenght__box box3"></div>
@@ -63,7 +63,7 @@
 					</div>
 				</div>
 				<button class="generate">
-					Generate
+					<span>Generate</span>
 					<svg width="12" height="12" xmlns="http://www.w3.org/2000/svg">
 						<path
 							fill="#24232C"
