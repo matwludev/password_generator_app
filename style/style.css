@@ -19,7 +19,12 @@ body {
   align-items: center;
 }
 body header {
-  margin: 6rem auto 2rem auto;
+  margin: 6rem auto 2rem;
+}
+@media screen and (min-width: 768px) {
+  body header {
+    margin: 13rem auto 3rem;
+  }
 }
 body header h1 {
   color: hsl(251deg, 9%, 53%);
@@ -29,10 +34,14 @@ body header h1 {
 
 body main {
   width: 100%;
-  margin: 0 2rem;
+  padding: 0 2rem;
+}
+@media screen and (min-width: 768px) {
+  body main {
+    padding: 0 12rem;
+  }
 }
 body main .generator {
-  margin: 0 2rem;
   background-color: hsl(248deg, 10%, 15%);
   display: flex;
   flex-direction: row;
@@ -45,6 +54,11 @@ body main .generator p {
   font-weight: 700;
   color: hsla(252deg, 11%, 91%, 0.25);
 }
+@media screen and (min-width: 768px) {
+  body main .generator p {
+    font-size: 3.2rem;
+  }
+}
 body main .generator button {
   background: none;
   border: none;
@@ -52,7 +66,7 @@ body main .generator button {
 }
 body main .options {
   background-color: hsl(248deg, 10%, 15%);
-  margin: 2rem;
+  margin-top: 2rem;
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -69,6 +83,11 @@ body main .options .char__lengthTextBox {
 body main .options .char__lengthTextBox label {
   color: hsl(252deg, 11%, 91%);
   font-size: 1.6rem;
+}
+@media screen and (min-width: 768px) {
+  body main .options .char__lengthTextBox label {
+    font-size: 1.8rem;
+  }
 }
 body main .options .char__lengthTextBox .rangeValue {
   font-size: 2.4rem;
@@ -212,6 +231,11 @@ body main .options .options__checkboxWrapper label {
   font-size: 1.6rem;
   color: hsl(252deg, 11%, 91%);
 }
+@media screen and (min-width: 768px) {
+  body main .options .options__checkboxWrapper label {
+    font-size: 1.8rem;
+  }
+}
 body main .options .options__strengthWrapper {
   width: 100%;
   display: flex;
@@ -227,6 +251,11 @@ body main .options .options__strengthWrapper h2 {
   font-size: 1.6rem;
   font-weight: 700;
 }
+@media screen and (min-width: 768px) {
+  body main .options .options__strengthWrapper h2 {
+    font-size: 1.8rem;
+  }
+}
 body main .options .options__strengthWrapper .options__strengthWrapper-boxes {
   display: flex;
   flex-direction: row;
@@ -236,6 +265,7 @@ body main .options .options__strengthWrapper .options__strengthWrapper-boxes .st
   color: hsl(252deg, 11%, 91%);
   text-transform: uppercase;
   font-size: 1.8rem;
+  font-size: 2.4rem;
 }
 body main .options .options__strengthWrapper .options__strengthWrapper-boxes .strenght__box {
   width: 1rem;
@@ -257,6 +287,7 @@ body main .options .generate span {
   text-transform: uppercase;
   font-weight: 700;
   color: hsl(248deg, 14%, 11%);
+  font-size: 1.8rem;
 }
 body main .options .generate svg {
   margin-left: 2rem;

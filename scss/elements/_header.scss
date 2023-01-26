@@ -5,7 +5,11 @@ body {
     justify-content: center;
     align-items: center;
     header {
-        margin: 6rem auto 2rem auto;
+        margin: 6rem auto 2rem;
+
+        @include tablet {
+            margin: 13rem auto 3rem;
+        }
         h1 {
             color: map-get($colors ,header-Text-color );
             font-size: 1.6rem;
