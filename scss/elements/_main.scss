@@ -1,9 +1,12 @@
 body {
     main {
         width: 100%;
-        margin: 0 2rem;
+        padding: 0 2rem;
+
+        @include tablet {
+          padding: 0 12rem;
+        }
         .generator {
-            margin: 0 2rem;
             background-color: map-get($colors, main-passGenBg-color );
             display: flex;
             flex-direction: row;
@@ -15,6 +18,10 @@ body {
                 font-size: 2.4rem;
                 font-weight: 700;
                 color: map-get($colors , main-passGenTextOff-color );
+
+                @include tablet {
+                  font-size: 3.2rem;
+                }
             }
 
             button {
@@ -25,7 +32,7 @@ body {
         }
         .options {
             background-color: map-get($colors, main-optionsBg-color );
-            margin: 2rem;
+            margin-top: 2rem;
             padding: 2rem;
             display: flex;
             flex-direction: column;
@@ -42,6 +49,10 @@ body {
                 label {
                     color: map-get($colors , main-lengthText-color );
                     font-size: 1.6rem;
+
+                    @include tablet {
+                      font-size: 1.8rem;
+                    }
                 }
 
                 .rangeValue{
@@ -206,6 +217,10 @@ body {
                 label {
                     font-size: 1.6rem;
                     color: map-get($colors, main-optionsText-color);
+
+                    @include tablet {
+                      font-size: 1.8rem;
+                    }
                 }
             }
             
@@ -223,6 +238,10 @@ body {
                     text-transform: uppercase;
                     font-size: 1.6rem;
                     font-weight: 700;
+
+                    @include tablet {
+                      font-size: 1.8rem;
+                    }
                 }
                 .options__strengthWrapper-boxes { 
                     display: flex;
@@ -233,6 +252,8 @@ body {
                         color: map-get($colors , main-strengthLevelText-color );
                         text-transform: uppercase;
                         font-size: 1.8rem;
+
+                        font-size: 2.4rem;
                     }
 
                     .strenght__box {
@@ -256,6 +277,8 @@ body {
                     text-transform: uppercase;
                     font-weight: 700;
                     color: map-get($colors ,generateBtn-Text-color );
+
+                    font-size: 1.8rem;
                 }
             svg {
                 margin-left: 2rem;
