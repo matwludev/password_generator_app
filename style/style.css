@@ -31,6 +31,11 @@ body header h1 {
   font-size: 1.6rem;
   font-weight: 700;
 }
+@media screen and (min-width: 1024px) {
+  body header h1 {
+    font-size: 2.4rem;
+  }
+}
 
 body main {
   width: 100%;
@@ -39,6 +44,11 @@ body main {
 @media screen and (min-width: 768px) {
   body main {
     padding: 0 12rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  body main {
+    padding: 0 45rem;
   }
 }
 body main .generator {
@@ -63,6 +73,12 @@ body main .generator button {
   background: none;
   border: none;
   margin-right: 2.5rem;
+}
+body main .generator button:hover {
+  cursor: pointer;
+}
+body main .generator button:hover svg path {
+  fill: hsl(252deg, 11%, 91%);
 }
 body main .options {
   background-color: hsl(248deg, 10%, 15%);
@@ -120,6 +136,10 @@ body main .options input[type=range]::-webkit-slider-thumb {
   cursor: pointer;
   -webkit-appearance: none;
 }
+body main .options input[type=range]::-webkit-slider-thumb:active, body main .options input[type=range]::-webkit-slider-thumb:hover {
+  background: hsl(248deg, 14%, 11%);
+  border-color: hsl(127deg, 100%, 82%);
+}
 body main .options input[type=range]:focus::-webkit-slider-runnable-track {
   background: #a8ffb2;
 }
@@ -139,6 +159,10 @@ body main .options input[type=range]::-moz-range-thumb {
   border-radius: 15px;
   cursor: pointer;
 }
+body main .options input[type=range]::-moz-range-thumb:active, body main .options input[type=range]::-moz-range-thumb:hover {
+  background: hsl(248deg, 14%, 11%);
+  border-color: hsl(127deg, 100%, 82%);
+}
 body main .options input[type=range]::-ms-track {
   background: transparent;
   border-color: transparent;
@@ -154,8 +178,8 @@ body main .options input[type=range]::-ms-fill-lower {
   border-radius: 2.6px;
 }
 body main .options input[type=range]::-ms-fill-upper {
-  background: rgba(163, 255, 174, 0.78);
-  border: 0.2px solid #a3ffae;
+  background: hsl(248deg, 14%, 11%);
+  border: 0.2px solid hsl(248deg, 14%, 11%);
   border-radius: 2.6px;
 }
 body main .options input[type=range]::-ms-thumb {
@@ -168,11 +192,15 @@ body main .options input[type=range]::-ms-thumb {
   margin-top: 0px;
   /*Needed to keep the Edge thumb centred*/
 }
+body main .options input[type=range]::-ms-thumb:active, body main .options input[type=range]::-ms-thumb:hover {
+  background: hsl(248deg, 14%, 11%);
+  border-color: hsl(127deg, 100%, 82%);
+}
 body main .options input[type=range]:focus::-ms-fill-lower {
   background: rgba(163, 255, 174, 0.78);
 }
 body main .options input[type=range]:focus::-ms-fill-upper {
-  background: #a8ffb2;
+  background: hsl(248deg, 14%, 11%);
 }
 body main .options .options__checkboxWrapper {
   margin-bottom: 2rem;
@@ -280,6 +308,16 @@ body main .options .generate {
   border-radius: 0;
   border: none;
   background-color: hsl(127deg, 100%, 82%);
+}
+body main .options .generate:hover {
+  background-color: transparent;
+  box-shadow: inset 0px 0px 0px 0.2rem hsl(127deg, 100%, 82%);
+}
+body main .options .generate:hover span {
+  color: hsl(127deg, 100%, 82%);
+}
+body main .options .generate:hover svg path {
+  fill: hsl(127deg, 100%, 82%);
 }
 body main .options .generate span {
   font-size: 1.6rem;
