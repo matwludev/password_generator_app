@@ -195,6 +195,16 @@ checkboxes.forEach(function (e) {
 
 rangeSlider.oninput = () => {
 	rangeValue.innerText = rangeSlider.value;
+	const val = rangeSlider.value;
+	const color =
+		"linear-gradient(90deg, rgb(164, 255, 175) calc(" +
+		val * 5 +
+		"% - 12px)," +
+		"rgb(24, 23, 31) calc(" +
+		val * 5 +
+		"% - 12px))";
+	console.log(color);
+	rangeSlider.style.background = color;
 };
 
 generator.onclick = (e) => {

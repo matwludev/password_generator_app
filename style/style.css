@@ -145,7 +145,6 @@ body main .options input[type=range]:focus::-webkit-slider-runnable-track {
   background: hsl(248deg, 14%, 11%);
 }
 body main .options input[type=range]::-moz-range-track {
-  background: linear-gradient(to right, hsl(127deg, 100%, 82%) 0%, hsl(127deg, 100%, 82%) calc(50% - 12px), hsl(248deg, 14%, 11%) calc(50% - 12px), hsl(248deg, 14%, 11%));
   border-radius: 1.3px;
   width: 100%;
   height: 8.1px;
